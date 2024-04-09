@@ -1,0 +1,39 @@
+# docker-compose.production.yml
+version: '3'
+
+volumes:
+  pg_data_production:
+  static:
+  media:
+
+services:
+  db:
+    image: postgres:13
+    env_file: .env
+    volumes:
+      - pg_data_production:/var/lib/postgresql/data
+  backend:
+    image: kise2k/kittygram_backend
+    env_file: .env
+    volumes:
+      - static:/backend_static
+      - media:/app/media
+    depends_on:
+      - db
+  frontend:
+    image: kise2k/kittygram_frontend
+    env_file: .env
+    command: cp -r /app/build/. /frontend_static/
+    volumes:
+      - static:/frontend_static
+  gateway:
+    image: kise2k/kittygram_gateway
+    env_file: .env
+    depends_on:
+      - frontend
+      - backend
+    volumes:
+      - static:/staticfiles/
+      - media:/app/media
+    ports:
+      - 9000:80
