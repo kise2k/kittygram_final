@@ -12,7 +12,7 @@
 Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
-    git@github.com:KDanil231/kittygram_final.git
+    git@github.com:kise2k/kittygram_final.git
     cd kittygram_final
 
 Установить виртуальное окружение и зависимости
