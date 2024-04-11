@@ -1,3 +1,5 @@
+![example workflow](https://github.com/kise2k/kittygram_final/actions/workflows/main.yml/badge.svg)
+
 Проект KITTYGRAM
 
 Учебный проект: Коты
