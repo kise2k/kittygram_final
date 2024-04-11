@@ -9,9 +9,11 @@ load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['158.160.79.215', '127.0.0.1', 'localhost', 'kinfra.zapto.org']
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS', default='127.0.0.1, localhost'
+).split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
