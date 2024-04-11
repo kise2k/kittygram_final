@@ -7,6 +7,7 @@
 Описание проекта: Проект позволяет выложить фото своего питомца и посмотреть фото чужих. Можно добавить цвет, имя, и достижения пушистого друга.
 
 Стэк технологий:
+  
   [Python 3.9](https://www.python.org/downloads/)
   
   [Django 3.2.3](https://www.djangoproject.com/download/)
@@ -16,6 +17,7 @@
 Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
+    
     git@github.com:kise2k/kittygram_final.git
     
     cd kittygram_final
